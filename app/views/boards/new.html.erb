@@ -1,0 +1,12 @@
+<h1>Boards#new</h1>
+
+<h3>
+<%= form_for @board do |f| %>
+  <%= f.label :name  %>
+  <%= f.text_field :name%>
+  <%= f.label :order %>
+    <%= f.text_field :order%>
+
+  <%= f.button :submit %>
+<% end %>
+</h3>

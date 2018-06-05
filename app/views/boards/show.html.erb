@@ -1,0 +1,25 @@
+<h1>Boards#show</h1>
+
+
+<p id="notice"><%= notice %></p>
+
+<div class="ui card">
+  
+  <div class="content">
+    <p class="header">
+      <%= @board.name %> 
+    </p>
+  <div class="meta">
+    <%= @board.order %>
+  </div>
+  <div class="description">
+    <%= @board.order %>
+
+  </div>
+ </div>
+ <div class="extra content">
+  <%= link_to 'Topic', new_board_topic_path(@board) %> |
+  <%= link_to 'Edit', edit_board_path(@board) %> |
+  <%= link_to 'Back', boards_path %>
+ </div>
+</div>

@@ -1,0 +1,9 @@
+<h1>Topic#index</h1>
+
+
+<%= link_to 'Create a new topic', new_topic_path %>
+<ul>
+  <% @topic.each do |topic| %>
+    <li><%= link_to topic.name, topic %></li>
+  <% end %>
+</ul>
