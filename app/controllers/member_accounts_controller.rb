@@ -16,10 +16,12 @@ class MemberAccountsController < ApplicationController
   end
 
   def create
-    @MemberAccounts = current_user.memberaccounts.new(account_params)
-    if @MemberAccounts.save
+    @memberaccounts = current_user.memberaccounts.new(account_params)
+    if @memberaccounts.save
+      flash[:success] = 'Account Created'
       redirect_to accounts_path
     else
+      flash[:effor] = "Error: #{@memberaccount.errors.full_messages.join("\n")}"
       render :new
     end
   end
