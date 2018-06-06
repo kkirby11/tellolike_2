@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
-
+gem 'rails-helper', '~> 0.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -46,7 +46,8 @@ group :development, :test do
   gem 'simplecov'
   gem 'pry'
   gem 'factory_bot_rails'
-
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  # REMEMBER: to add the coverage/ folder to your .gitignore - also wouldn't be a bad idea to add the .DS_Store file as well
 end
 
 group :development do
@@ -59,10 +60,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
-  gem 'database_cleaner'
-  # REMEMBER: to add the coverage/ folder to your .gitignore - also wouldn't be a bad idea to add the .DS_Store file as well
-  gem 'simplecov'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

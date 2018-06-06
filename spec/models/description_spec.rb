@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Description, type: :model do
     describe 'validations' do
@@ -8,7 +8,7 @@ RSpec.describe Description, type: :model do
     describe 'attributes' do
       it 'has a title' do 
         title = 'learn things'
-        des = Description.create(title: title)
+        des = Description.create(title.title)
         expect(des.title).to eq(title)
       end
     end
